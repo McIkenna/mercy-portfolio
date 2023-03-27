@@ -1,0 +1,27 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "projectTitle": "glucose content in foods analysis",
+            "projectSummary": "I performed research to determine how glucose level responds to particular foods. So that foods with a lower glucose response can be recommended to patients with diabetes, this will help to reduce mortality rate in the society and promote healthy living lifestyle in the society",
+            "details": "I received statistical data containing the type of diet a group of subjects was subjected to over a period and the glucose level was measured. Using R programming I was able to determine a change in the glucose level when the diet was varied (i.e., change food types). A pairwise comparison of diet was performed using Dunnett method of multiple comparison, between two different pair of diets. It was observed that there were not much significant changes for the two pairs. Using time as a blocking factor it was observed that glucose level responds to a particular foods over a given period."
+        },
+        {
+            "id": "2",
+            "projectTitle": "Reactor Vessel Analysis",
+            "projectSummary": "I performed Analysis in determining the influence of temperature, pressure, and / or time on chemical yield in a reactor vessel.",
+            "details": "Having a process feedstock which is highly variable so that batch to batch feedstock is highly expected. Furthermore, each batch of feedstock is only big enough for seven runs (experimental units). I decided to use Balanced Incomplete Block Design (BIBD) with each of the eight factor level combinations missing from one of the blocks. A random scheme was used to determine the allocated pairs of using the Analysis of Variance (ANOVA), which is a statistical model used to determine the variance of any comparable factor."
+        },
+        {
+            "id": "3",
+            "projectTitle": "COVID Impact on start-ups",
+            "projectSummary": "I have also performed research on the effect of COVID pandemic on the profit of startups based on their administrative costs, geographical location, advertisement cost, research and development cost (R&D). Using these features, a model was designed to predict the profit and sustainability of the organization."
+        },
+        {
+            "id": "4",
+            "projectTitle": "Airline volume Analysis",
+            "projectSummary": "I performed analysis to predict the number of international airline passengers per month based on the data obtained over a period of 12 years.",
+            "details":  "144 observations of passengers was collected for each month over a period of 12 years. The data was split into Training set and Test set in the ratio of 80:20.Feature scaling was applied to the data to normalize it and the model used was the Long Short Term Memory (LSTM) which was used to build the trained model. A single prediction was made and also prediction was made for the Test set Root mean square error was used to get the accuracy of both training set and test and it has 22.93 and 47.53 respectively as the data ranges from 104 to 622, also I checked the accuracy score using the confusion matrix. All of these led to how accurate the model is as LSTM is better for time series data. Visualization was done on the predicted data and the actual data using the matplotlib."
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "publications": [
+        {
+            "id": 1,
+            "title": "Credit Card Fraud Detection Analysis Using Different  Machine Learning Models",
+            "abstract": "This paper implemented and trained various Machine Learning models for classification of unbalanced Credit Card fraud detection to determine the suitable model. One hundred and eighty-six thousand, three hundred and forty-five sample of PCA sample data were collected, trained, and validated on various models. The models used were Decision Tree, Random Forest, Artificial Neural Network (ANN), Logistic Regression, Support Vector Machine (SVM) and K- Nearest Neighbor (KNN). The performance of these models was evaluated and compared based on their performance metric which are accuracy score, confusion matrix, precision score, recall score and f-measure or f-score. The results obtained shows that K- Nearest Neighbor (KNN) and Artificial Neural Network (ANN) performed better than others with accuracy score of 99.5% and 99.4% respectively. The study concluded that with the high accuracy score achieved by both KNN and ANN, this will help to enhance the efficiency of fraud detection made using Credit card which follows the same PCA elements in the data preprocessing.",
+            "authors": "Mercy Okonna, Olalekan Ola Adaramola, Damilola Elelegwu, Jongyeop Kim",
+            "link": ""
+        },
+        {
+            "id": 2,
+            "title": "MODELLING MUSCLE ACTIVATION USING EMG SIGNAL",
+            "abstract": "Electromyography (EMG) is a method for measuring muscle activity by an electrical signal, and is useful in studying motor control, postural control, and in physical therapy. A current research topic is creating an algorithm that can use the EMG signal to reliably classify a muscle as active or inactive. This thesis presents a classification algorithm for leg muscles with a single activation spike while walking. Time is rescaled into steps, which are identified using data from cameras measuring joint angles while walking. The algorithm is based on moving averages and a convex combination of mean signal strength in active and inactive regions. The algorithm is tested on EMG signals from the gastrocnemius, vastus lateralis, and tibialis muscles, using angle measurements from hip, knee, and ankle joints.",
+            "authors": "Mercy Okonna, Stephen Carden, Li Li, Ionut Iacob",
+            "link": ""
+        },
+        {
+            "id": 3,
+            "title": "Cyber-security anomaly detection using different machine learning models.",
+            "abstract": "Intrusion detection systems (IDS) have been developed to detect and report attacks. Increasing internet usage has also brought many security gaps. Many technologies such as firewalls, data encryption, and user authentication are used to prevent these security gaps. These security mechanisms prevent many types of attacks. Intrusion prevention systems (IPS) and IDS systems have been developed to complement the shortcomings of these security mechanisms. Cyber security typically consists of a network security system and a computer security system. Although various systems, such as firewalls and encryption, are designed to handle internet-based cyber-attacks, intrusion detection systems (IDS) are more capable of resisting the computer network from external attacks. An IDS conducts the process of identifying malicious cyber-attack behavior on a network while monitoring and evaluating the daily activities in a network or computer system to detect security risks or threats. This is done using some techniques which are classification, statistical, clustering, and information theory. Intrusion detection helps to discover, determine and identify unauthorized system behavior such as unauthorized access, or modification and destruction.",
+            "authors": "Mercy Okonna",
+            "link": ""
+        },
+        {
+            "id": 4,
+            "title": "Matrix Representation Of Symmetry, Group Theory And Its  Applications",
+            "abstract": "This project work looked at some matrix representations of transformation symmetry operations and outlined some chemical applications especially the vibrational motions of molecules.",
+            "authors": "Mercy Okonna, Chinazaekpere Obi",
+            "link": ""
+        }
+    ]
+}
