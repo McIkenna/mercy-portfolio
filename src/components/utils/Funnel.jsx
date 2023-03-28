@@ -27,11 +27,11 @@ const Funnel = () => {
                 case 54330:
                     return `${"COMARC (Data Analyst)"}`
                 case 43000:
-                    return `${"GEORGIA SOUTHERN UNIVERSITY (Teaching Assistant)"}`
+                    return `${"GEORGIA SOUTHERN UNIVERSITY (Machine Learning & AI Research Assistant)"}`
                 case 34000:
                     return `${"OAK ROOT HIGH SCHOOL (Mathematics Instructor)"}`
                 default:
-                    return `${"DISCOVER FINANCIAL SERVICES (Senior Data Analyst)"}`
+                    return `${"DISCOVER FINANCIAL SERVICES (Senior Data Science Analyst)"}`
             }
         }
         }

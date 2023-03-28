@@ -191,10 +191,10 @@
             "id": "SAS",
             "skillName": "SAS",
             "label": "GRAPH, ETS, Enterprise Miner, Quality Control, Grid Manager, EBI",
-            "value": 50,
+            "value": 95,
             "color": "#FF9F1C",
-            "proficiency": "Moderate",
-            "rating": "5/10"
+            "proficiency": "Expert",
+            "rating": "95/10"
         },
         {
             "id": "Data Analytics",
@@ -254,9 +254,9 @@
             "id": "Version Control",
             "skillName": "Version Control",
             "label": "GIT, GitHub, BitBucket",
-            "value": 60,
+            "value": 70,
             "color": "#657ED4",
-            "proficiency": "Moderate",
+            "proficiency": "Advance",
             "rating": "6/10"
         },
         {
