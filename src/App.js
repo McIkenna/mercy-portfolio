@@ -13,7 +13,7 @@ import Award from './scenes/dashboard/Award';
 import Work from './scenes/dashboard/Work';
 import Calender from './scenes/dashboard/Calender';
 import PieChart from './scenes/dashboard/PieChart';
-import Bubble from './scenes/dashboard/Bubble';
+import FunnelChart from './scenes/dashboard/FunnelChart';
 import Network from './scenes/dashboard/Network';
 import { Routes, Route} from 'react-router-dom';
 
@@ -37,6 +37,8 @@ const App  =()=> {
             <Route path="/work" element={<Work />}/>
             <Route path="/calender" element={<Calender />}/>
             <Route path="/pieChart" element={<PieChart />}/>
+            <Route path="/netChart" element={<Network />}/>
+            <Route path="/funnelChart" element={<FunnelChart />}/>
           </Routes>
         </main>
         </div>

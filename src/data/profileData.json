@@ -151,103 +151,140 @@
     ],
     "skills": [
         {
-            "id": "3",
+            "id": "Python",
             "skillName": "Python",
-            "subName": "TensorFlow, Scikit-Learn, Numpy, MatPlotLib, Pandas, Keras, SciPy",
+            "label": "TensorFlow, Scikit-Learn, Numpy, MatPlotLib, Pandas, Keras, SciPy",
+            "value": 100,
             "proficiency": "Proficient",
+            "color": "#41EAD4",
             "rating": "9/10"
         },
         {
 
-            "id": "4",
+            "id": "R",
             "skillName": "R",
-            "subName": "Caret, ggplot, ggraph, tidyr, dygraphs, Shiny, SciPy",
-            "proficiency": "Proficient",
+            "label": "Caret, ggplot, ggraph, tidyr, dygraphs, Shiny, SciPy",
+            "value": 80,
+            "color": "#011627",
+            "proficiency": "Advance",
             "rating": "9/10"
         },
         {
-            "id": "5",
+            "id": "SQL",
             "skillName": "SQL",
-            "subName": " Oracle DB, MySQL, PostgreSQL, Microsoft SQL Server, SQLite",
+            "label": " Oracle DB, MySQL, PostgreSQL, Microsoft SQL Server, SQLite",
+            "value": 100,
+            "color": "#F71735",
             "proficiency": "Expert",
             "rating": "8/10"
         },
         {
-            "id": "6",
+            "id": "NoSQL",
             "skillName": "NoSQL",
-            "subName": "SnowFlakes, DynamoDB",
-            "proficiency": "Expert",
+            "label": "SnowFlakes, DynamoDB",
+            "value": 100,
+            "color": "#FDFFFC",
+            "proficiency": "Advance",
             "rating": "8/10"
         },
         {
-            "id": "1",
+            "id": "SAS",
             "skillName": "SAS",
-            "subName": "",
-            "proficiency": "Advanced",
+            "label": "GRAPH, ETS, Enterprise Miner, Quality Control, Grid Manager, EBI",
+            "value": 50,
+            "color": "#FF9F1C",
+            "proficiency": "Moderate",
+            "rating": "5/10"
+        },
+        {
+            "id": "Data Analytics",
+            "skillName": "Data Analytics",
+            "label": "Data Mining, Cleaning & Manipulation, Database Application Development",
+            "value": 95,
+            "color": "#090A0B",
+            "proficiency": "Expert",
+            "rating": "9.5/10"
+        },
+        {
+            "id": "Visualization",
+            "skillName": "Visualization",
+            "label": "PowerBI, MatPlotLib, Tableau",
+            "value": 70,
+            "color": "#F1E3D3",
+            "proficiency": "Advance",
             "rating": "7/10"
         },
         {
-            "id": "3",
-            "skillName": "Visualization",
-            "subName": "PowerBI, MatPlotLib, Tableau",
-            "proficiency": "expert",
-            "rating": "9/10"
-        },
-        {
-            "id": "7",
+            "id": "HTML",
             "skillName": "HTML",
-            "subName": "XML, JSX",
-            "proficiency": "Novice",
-            "rating": "6/10"
+            "label": "XML, JSX",
+            "value": 80,
+            "color": "#EDEEC0",
+            "proficiency": "Advance",
+            "rating": "7/10"
         },
         {
-            "id": "8",
+            "id": "Operating Systems",
             "skillName": "Operating Systems",
-            "subName": "Linux, Windows",
+            "label": "Linux, Windows",
+            "value": 50,
+            "color": "#E4DFDA",
             "proficiency": "Novice",
             "rating": "5/10"
         },
         {
-            "id": "9",
+            "id": "MATLAB",
             "skillName": "MATLAB",
-            "subName": "SIMULINK",
-            "proficiency": "Advanced",
-            "rating": "7/10"
+            "label": "SIMULINK",
+            "value": 60,
+            "color": "#D4B483",
+            "proficiency": "Moderate",
+            "rating": "6/10"
         },
         {
-            "id": "12",
+            "id": "Project Tools",
             "skillName": "Project Tools",
-            "subName": "JIRA, Confluence, Slack, Trello, Asana, Google Drive",
-            "proficiency": "Expert",
-            "rating": "8/10"
+            "label": "JIRA, Confluence, Slack, Teams, Asana, Google Drive",
+            "value": 95,
+            "color": "#4C2719",
+            "proficiency": "Advance",
+            "rating": "7/10"
         },
         {
-            "id": "13",
+            "id": "Version Control",
             "skillName": "Version Control",
-            "subName": "GIT, GitHub, BitBucket",
-            "proficiency": "Expert",
-            "rating": "8/10"
+            "label": "GIT, GitHub, BitBucket",
+            "value": 60,
+            "color": "#657ED4",
+            "proficiency": "Moderate",
+            "rating": "6/10"
         },
         {
-            "id": "14",
+            "id": "CICD",
             "skillName": "CICD",
-            "subName": "Jenkins, GitHub",
-            "proficiency": "Proficient",
-            "rating": "7/10"
+            "label": "Jenkins, AWS CICD",
+            "value": 60,
+            "color": "#433E0E",
+            "proficiency": "Moderate",
+            "rating": "6/10"
         },
         {
-            "id": "15",
+            "id": "IDEs Tools",
             "skillName": "IDEs/UI Tools",
-            "subName": " IntelliJ, PyCharm, Visual Studio, Jupyter",
+            "label": " IntelliJ, PyCharm, Visual Studio, Jupyter",
+            "value": 80,
+            "color": "#F2F230",
             "proficiency": "Expert",
             "rating": "8/10"
         },
         {
-            "id": "20",
+            "id": "SoftSkills",
             "skillName": "SoftSkills",
-            "subName": "Good Communication, Fast Learner, Quick Decision Maker, Goal Oriented, Collaborator",
+            "label": "Good Communication, Fast Learner, Quick Decision Maker, Goal Oriented, Collaborator",
             "proficiency": "Proficient",
-            "rating": "7/10"
+            "value": 90,
+            "color": "#712F79",
+            "rating": "9/10"
         }
     ],
     "workExperience": [
@@ -260,9 +297,8 @@
             "startDate": "2023",
             "rate": "100%",
             "location": "Chicago, Illinois",
-            "file": null,
-            "fileName": "",
-            "image_preview": ""
+            "value": 87500,
+            "label": "DISCOVER FINANCIAL SERVICES"
         },
         {
             "id": 2,
@@ -273,9 +309,8 @@
             "rate": "50%",
             "location": "Baltimore, Maryland",
             "endDate": "",
-            "file": null,
-            "fileName": "",
-            "image_preview": ""
+            "value": 54330,
+            "label": "CORMAC"
         },
         {
             "id": 3,
@@ -286,9 +321,8 @@
             "startDate": "",
             "rate": "50%",
             "location": "Statesboro, Georgia",
-            "file": null,
-            "fileName": "",
-            "image_preview": ""
+            "value": 43000,
+            "label": "Georgia Southern University"
         },
         {
             "id": 4,
@@ -298,11 +332,8 @@
             "image": "https://aipalbotinfotech.com/images/kkkk.png",
             "rate": "30%",
             "location": "Port Harcourth, Nigeria",
-            "startDate": "",
-            "endDate": "",
-            "file": null,
-            "fileName": "",
-            "image_preview": ""
+            "value": 34000,
+            "label": "Oak Root High School, Nigeria"
         }
     ]
 }

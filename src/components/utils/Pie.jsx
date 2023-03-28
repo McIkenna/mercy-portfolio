@@ -1,14 +1,14 @@
 import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../../themes";
 import { useTheme } from "@mui/material";
-import data from "../../data/data.json";
+import data from "../../data/profileData.json";
 
 const Pie = ({ isDashboard = false}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
     <ResponsivePie
-      data={data}
+      data={data.skills}
       theme={{
         axis: {
           domain: {
@@ -36,8 +36,27 @@ const Pie = ({ isDashboard = false}) => {
             fill: colors.gray[100],
           },
         },
+        tooltip:{
+          container:{
+            background: colors.gray[100]
+          }
+        }
       }}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+      tooltip={({ datum: { id, label } }) => (
+        <div
+            style={{
+                padding: 5,
+                color: "black",
+                background: colors.gray[100],
+                fontFamily: "sans-serif"
+            }}
+        >
+            <strong>
+                {id}: {label}
+            </strong>
+        </div>
+    )}
+    margin={{ top: 40, right: 90, bottom: 90, left: 90 }}
       innerRadius={0.5}
       padAngle={0.7}
       cornerRadius={3}
@@ -77,10 +96,10 @@ const Pie = ({ isDashboard = false}) => {
           anchor: "right",
           direction: "column",
           justify: false,
-          translateX: -20,
+          translateX: -150,
           translateY: 50,
           itemsSpacing: 20,
-          itemWidth: 100,
+          itemWidth: 95,
           itemHeight: 18,
           itemTextColor: colors.purpleAccent[800],
           itemDirection: "left-to-right",

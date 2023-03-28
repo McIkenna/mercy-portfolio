@@ -5,8 +5,6 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../themes";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ContactPageOutlinedIcon from '@mui/icons-material/ContactPageOutlined';
-import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import CasesOutlinedIcon from '@mui/icons-material/CasesOutlined';
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
@@ -17,6 +15,7 @@ import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import PieChartOutlineIcon from '@mui/icons-material/PieChartOutline';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import HubIcon from '@mui/icons-material/Hub';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
 const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
@@ -95,7 +94,7 @@ const Sidebar=()=>{
 
                     <Box textAlign="center">
                     <Typography variant="h3" color={colors.tealAccent[100]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Mercy Okonna</Typography>
-                    <Typography variant="h6" color={colors.gray[400]}> Senior Data Scientist</Typography>
+                    <Typography variant="h6" color={colors.gray[400]}> Data Scientist, Machine Learning & AI Enthusiast</Typography>
                     </Box>
                 </Box>
                 
@@ -161,20 +160,20 @@ const Sidebar=()=>{
                 setSelected={setSelected}
                 />
                 <Item
-                title = "BubbleChart"
-                to="/bubblechart"
-                icon={<BubbleChartIcon />}
+                title = "FunnelChart"
+                to="/funnelchart"
+                icon={<FilterAltIcon />}
                 selected={selected}
                 setSelected={setSelected}
                 />
-                <Item
+                {/* <Item
                 title = "netChart"
                 to="/netchart"
                 icon={<HubIcon />}
                 selected={selected}
                 setSelected={setSelected}
-                />
-                </Typography>
+                />*/}
+                </Typography> 
             </Box>
 
             </Menu>

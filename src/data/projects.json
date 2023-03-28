@@ -15,7 +15,7 @@
         {
             "id": "3",
             "projectTitle": "COVID Impact on start-ups",
-            "projectSummary": "I have also performed research on the effect of COVID pandemic on the profit of startups based on their administrative costs, geographical location, advertisement cost, research and development cost (R&D). Using these features, a model was designed to predict the profit and sustainability of the organization."
+            "details": "I performed a research on the effect of COVID pandemic on the profit of startups based on their administrative costs, geographical location, advertisement cost, research and development cost (R&D). Using these features, a model was designed to predict the profit and sustainability of the organization."
         },
         {
             "id": "4",

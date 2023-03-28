@@ -9,6 +9,8 @@ import ContactBox from "../../components/utils/ContactBox";
 import { PhoneAndroidOutlined } from "@mui/icons-material";
 import Pie from "../../components/utils/Pie";
 import { Link } from "react-router-dom";
+import NetworkChart from "../../components/utils/NetworkChart";
+import Funnel from "../../components/utils/Funnel";
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
@@ -31,13 +33,13 @@ const Dashboard = () => {
                         title="Phone"
                         subtitle={datas.contact.phone}
                         progress="0.25"
-                        icon={<PhoneAndroidOutlined sx={{ color: colors.purpleAccent[600], fontSize: "26px" }} />}
+                        icon={<PhoneAndroidOutlined sx={{ color: colors.purpleAccent[600] }} />}
                     />
                     <ContactBox
                         title="Email"
                         subtitle={datas.contact.email}
                         progress="0.50"
-                        icon={<MailOutlineIcon sx={{ color: colors.purpleAccent[600], fontSize: "26px" }} />}
+                        icon={<MailOutlineIcon sx={{ color: colors.purpleAccent[600] }} />}
                     />
 
                 </Box>
@@ -48,20 +50,36 @@ const Dashboard = () => {
                     display="flex"
                     justifyContent="center"
                 >
+                    <Link to={"https://www.linkedin.com/in/mercy-okonna"} target="_blank"
+                    style={{ textDecoration: 'none' }}
+                    >
                     <ContactBox
                         title="LinkedIn"
                         subtitle={datas.contact.social}
                         progress="0.75"
                         icon={<ShareOutlinedIcon sx={{ color: colors.purpleAccent[600], fontSize: "26px" }} />}
                     />
+                    </Link>
                 </Box>
                 {/*Second row */}
                 <Box
                     gridColumn="span 6"
                     gridRow="span 3"
                     backgroundColor={colors.primary[400]}
+                    overflow="hidden"
+                    p="0 0 0 5px"
                 >
-                    <Box height="55vh">
+                    <Link to={"skill"}
+                    style={{ textDecoration: 'none' }}
+                    >
+                     <Typography
+                            color={colors.tealAccent[800]}
+                            variant="h6"
+                            fontWeight="600">
+                            SKILLS & EXPERTISE
+                        </Typography>
+                    </Link>
+                    <Box height="50vh" overflow="hidden">
                         <Pie isDashboard={true}/>
 
                     </Box>
@@ -76,7 +94,7 @@ const Dashboard = () => {
                         p='0 30px'
                         justifyContent="space-between"
                         alignItems="center">
-                        <Typography variant="h3" fontWeight="600" color={colors.gray[100]} pb='10px'>
+                        <Typography variant="h3" fontWeight="600" color={colors.tealAccent[800]} pb='10px'>
                             Profile Summary
                         </Typography>
                         <Typography variant="h5" color={colors.gray[100]} justifyContent="">
@@ -98,12 +116,16 @@ const Dashboard = () => {
                         colors={colors.gray[100]}
                         p="15px"
                     >
+                    <Link to={"education"}
+                    style={{ textDecoration: 'none' }}
+                    >
                         <Typography
                             color={colors.tealAccent[800]}
                             variant="h5"
                             fontWeight="600">
-                            EDUCATION AND CERTIFICATES
+                            EDUCATION AND CERTIFICATIONS
                         </Typography>
+                        </Link>
                     </Box>
                     {datas.educations.map((edu) => {
                         return (
@@ -144,9 +166,22 @@ const Dashboard = () => {
                     gridColumn="span 6"
                     gridRow="span 2"
                     backgroundColor={colors.primary[400]}
+                    overflow="hidden"
+                    p="0 0 0 10px"
                 >
-                    <Box height="55vh">
-                        <Pie isDashboard={true}/>
+                    <Link to={"work"}
+                    style={{ textDecoration: 'none' }}
+                    >
+                    <Typography
+                            color={colors.tealAccent[800]}
+                            variant="h5"
+                            fontWeight="600">
+                            WORK EXPERIENCE
+                    </Typography>
+                    </Link>
+                    <Box height="30vh">
+                        <Funnel
+                        />
 
                     </Box>
                 </Box> 

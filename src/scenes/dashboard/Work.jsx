@@ -16,7 +16,8 @@ const Work=()=>{
             <Box
             display="grid"
             gridTemplateColumns="repeat(12, 1fr)"
-            gap="20px">
+            gap="20px"
+            pt="10%">
                 {
                 datas.workExperience.map((work) => {
                     return(<Box

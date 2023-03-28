@@ -6,7 +6,8 @@ body,
 .content {
   height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif
+  font-family: 'Poppins', sans-serif;
+  overflow-y: scroll;
 }
 
 .app {

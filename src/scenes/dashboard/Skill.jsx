@@ -8,9 +8,8 @@ const Skill = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
     const columns = [
-        {field: "id", headerName: "ID"}, 
     {field: "skillName", headerName: "Technology", flex:1}, 
-    {field: "subName", headerName: "Framework or library", flex: 1}, 
+    {field: "label", headerName: "Framework or library", flex: 1}, 
     {field: "proficiency", headerName: "level", flex: 1}
 ];
 
