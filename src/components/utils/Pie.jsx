@@ -3,7 +3,7 @@ import { tokens } from "../../themes";
 import { useTheme } from "@mui/material";
 import data from "../../data/profileData.json";
 
-const Pie = ({ isDashboard = false}) => {
+const Pie = ({ isDashboard = false, isMobile}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -91,7 +91,7 @@ const Pie = ({ isDashboard = false}) => {
         },
       ]}
      legends={
-      isDashboard ? [] : [
+      isDashboard ? [] : isMobile ? [] : [
         {
           anchor: "right",
           direction: "column",

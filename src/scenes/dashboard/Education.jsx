@@ -20,10 +20,7 @@ const Education=()=>{
             >
                 
             <Box
-                gridColumn="span 8"
-                alighItems="center"
-                display="flex"
-                justifyContent="center"
+                gridColumn={{xs: "span 12", sm: "span 12", md: "span 8"}}
                 m="20px"
              >
                 <Box
@@ -61,7 +58,7 @@ const Education=()=>{
                     return (
                         <Box
                         key={c.id}
-                        display="flex"
+                        display={{xs: "block", sm: "flex", md: "flex"}}
                         justifyContent="space-between"
                         alignItems="center"
                         borderBottom={`2px solid ${colors.purpleAccent[500]}`}
@@ -75,7 +72,7 @@ const Education=()=>{
                             </Box>
                             <Box>
                                 <Typography
-                                color={colors.gray[200]}
+                                color={colors.tealAccent[200]}
                                 variant="h6"
                                 fontWeight="600">
                                     {c.name2}
@@ -91,35 +88,28 @@ const Education=()=>{
                
             </Box>
             <Box 
-            gridColumn="span 4"
-            alighItems="center"
-            display="block"
-            justifyContent="center">
+            gridColumn={{xs: "none", sm: "none", md: "span 4"}}
+            display={{xs: "none", sm: "none", md: "flex"}}>
             <CardMedia
                 component="img"
-                sx={{ width: 200, pt: 10}}
+                sx={{ width: "50%", m: 10}}
                 image={datas.educations[0].educationImage}
                 alt="Live from space album cover"
             />
             </Box>
-            <Box gridColumn="span 2"></Box>
             <Box 
-            gridColumn="span 2"
-            alighItems="left"
+            gridColumn={{xs: "none", sm: "none", md: "span 4"}}
+            display={{xs: "none", sm: "none", md: "flex"}}
             >
             <CardMedia
-                
                 component="img"
-                sx={{ width: 200, pt: 10}}
+                sx={{ width: "50%", m: 10}}
                 image={datas.educations[1].educationImage}
                 alt="Live from space album cover"
             />
             </Box>
             <Box
-                gridColumn="span 8"
-                alighItems="center"
-                display="flex"
-                justifyContent="center"
+                gridColumn={{xs: "span 12", sm: "span 12", md: "span 8"}}
                 m="20px"
              >
                  <Box
@@ -158,7 +148,7 @@ const Education=()=>{
                     return (
                         <Box
                         key={c.id}
-                        display="flex"
+                        display={{xs: "block", sm: "flex", md: "flex"}}
                         justifyContent="space-between"
                         alignItems="center"
                         borderBottom={`2px solid ${colors.purpleAccent[500]}`}
@@ -172,7 +162,7 @@ const Education=()=>{
                             </Box>
                             <Box>
                                 <Typography
-                                color={colors.gray[200]}
+                                color={colors.tealAccent[200]}
                                 variant="h6"
                                 fontWeight="600">
                                     {c.name2}
@@ -181,16 +171,11 @@ const Education=()=>{
                         </Box>
                     )
                 })}
-
-
             </Box>
                 </Box>
             </Box>
             <Box
-                gridColumn="span 8"
-                alighItems="center"
-                display="flex"
-                justifyContent="center"
+                gridColumn={{xs: "span 12", sm: "span 12", md: "span 8"}}
                 m="20px"
              >
                 <Box
@@ -228,7 +213,7 @@ const Education=()=>{
                     return (
                         <Box
                         key={c.id}
-                        display="flex"
+                        display={{xs: "block", sm: "flex", md: "flex"}}
                         justifyContent="space-between"
                         alignItems="center"
                         borderBottom={`2px solid ${colors.purpleAccent[500]}`}
@@ -242,7 +227,7 @@ const Education=()=>{
                             </Box>
                             <Box>
                                 <Typography
-                                color={colors.gray[200]}
+                                color={colors.tealAccent[200]}
                                 variant="h6"
                                 fontWeight="600">
                                     {c.name2}
@@ -256,28 +241,27 @@ const Education=()=>{
             </Box>
                 </Box>
             </Box>
-            <Box gridColumn="span 4">
+            <Box 
+            gridColumn={{xs: "none", sm: "none", md: "span 4"}}
+            display={{xs: "none", sm: "none", md: "flex"}}>
             <CardMedia
                 component="img"
-                sx={{ width: 200, pt: 10}}
+                sx={{ width: "50%", m: 10}}
                 image={datas.educations[2].educationImage}
                 alt="Live from space album cover"
             />
             </Box>
-            <Box gridColumn="span 2"></Box>
-            <Box gridColumn="span 2">
+            <Box gridColumn={{xs: "none", sm: "none", md: "span 4"}} 
+            display={{xs: "none", sm: "none", md: "flex"}}>
             <CardMedia
                 component="img"
-                sx={{ width: 200, pt: 10 }}
+                sx={{ width: "50%", m: 10 }}
                 image={datas.educations[3].educationImage}
                 alt="Live from space album cover"
             />
             </Box>
             <Box
-                gridColumn="span 8"
-                alighItems="right"
-                display="flex"
-                justifyContent="center"
+                gridColumn={{xs: "span 12", sm: "span 12", md: "span 8"}}
                 m="20px"
              >
                 
@@ -316,7 +300,7 @@ const Education=()=>{
                     return (
                         <Box
                         key={c.id}
-                        display="flex"
+                        display={{xs: "block", sm: "flex", md: "flex"}}
                         justifyContent="space-between"
                         alignItems="center"
                         borderBottom={`2px solid ${colors.purpleAccent[500]}`}
@@ -330,7 +314,7 @@ const Education=()=>{
                             </Box>
                             <Box>
                                 <Typography
-                                color={colors.gray[200]}
+                                color={colors.tealAccent[200]}
                                 variant="h6"
                                 fontWeight="600">
                                     {c.name2}

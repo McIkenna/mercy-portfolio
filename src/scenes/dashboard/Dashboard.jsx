@@ -3,14 +3,13 @@ import { tokens } from "../../themes";
 import Header from "../../components/Header";
 import data from "../../data/profileData.json"
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ContactBox from "../../components/utils/ContactBox";
 import { PhoneAndroidOutlined } from "@mui/icons-material";
 import Pie from "../../components/utils/Pie";
 import { Link } from "react-router-dom";
 import NetworkChart from "../../components/utils/NetworkChart";
 import Funnel from "../../components/utils/Funnel";
+import SkillComp from "../../components/utils/SkillComp";
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
@@ -23,10 +22,12 @@ const Dashboard = () => {
                 gridAutoRows="140px"
                 gap="20px">
                 <Box
-                    gridColumn="span 3"
+                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
+                    gridRow= "span 1"
                     backgroundColor={colors.primary[400]}
                     alighItems="center"
-                    display="flex"
+                    justifyItems="center"
+                    display={{xs: "block", sm: "flex", md: "flex"}}
                     justifyContent="center"
                 >
                     <ContactBox
@@ -41,30 +42,36 @@ const Dashboard = () => {
                         progress="0.50"
                         icon={<MailOutlineIcon sx={{ color: colors.purpleAccent[600] }} />}
                     />
-
-                </Box>
-                <Box
+                    <Box
                     gridColumn="span 3"
                     backgroundColor={colors.primary[400]}
                     alighItems="center"
                     display="flex"
                     justifyContent="center"
                 >
-                    <Link to={"https://www.linkedin.com/in/mercy-okonna"} target="_blank"
-                    style={{ textDecoration: 'none' }}
-                    >
-                    <ContactBox
-                        title="LinkedIn"
-                        subtitle={datas.contact.social}
-                        progress="0.75"
-                        icon={<ShareOutlinedIcon sx={{ color: colors.purpleAccent[600], fontSize: "26px" }} />}
-                    />
-                    </Link>
+                
+                </Box>
                 </Box>
                 {/*Second row */}
                 <Box
-                    gridColumn="span 6"
-                    gridRow="span 3"
+                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
+                    gridRow={{xs: "span 2", sm: "span 2", md: "span 2"}}
+                    backgroundColor={colors.primary[400]}
+                    overflow="auto">
+                    <Box
+                        p={{xs: '25px 10px 0 10px', sm: '30px 10px 0 10px', md: "45px 20px 0 20px"}}
+                        alignItems="center">
+                        <Typography variant="h5" fontWeight="600" color={colors.tealAccent[800]} pb='10px'>
+                            PROFILE SUMMARY
+                        </Typography>
+                        <Typography variant={{xs: "h8", sm: "h7", md: "h6"}} color={colors.gray[100]} align="justify">
+                            {datas.summary}
+                        </Typography>
+                    </Box>
+                </Box>
+                <Box
+                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
+                    gridRow={{xs: "span 4", sm: "span 3", md: "span 3"}}
                     backgroundColor={colors.primary[400]}
                     overflow="hidden"
                     p="0 0 0 5px"
@@ -74,37 +81,47 @@ const Dashboard = () => {
                     >
                      <Typography
                             color={colors.tealAccent[800]}
-                            variant="h6"
-                            fontWeight="600">
+                            variant="h5"
+                            fontWeight="600"
+                            p="10px">
                             SKILLS & EXPERTISE
                         </Typography>
                     </Link>
-                    <Box height="50vh" overflow="hidden">
+                    <Box height="50vh" overflow="hidden" display={{xs: "none", sm: "flex", md: "flex"}}>
                         <Pie isDashboard={true}/>
+
+                    </Box>
+                    <Box height="60vh" overflow="hidden" display={{xs: "flex", sm: "none", md: "none"}}>
+                        <SkillComp/>
 
                     </Box>
                 </Box> 
                 <Box
-                    gridColumn="span 6"
-                    gridRow="span 2"
+                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
+                    gridRow={{xs: "span 2", sm: "span 3", md: "span 4"}}
                     backgroundColor={colors.primary[400]}
-                    overflow="auto">
-                    <Box
-                        mt="25px"
-                        p='0 30px'
-                        justifyContent="space-between"
-                        alignItems="center">
-                        <Typography variant="h3" fontWeight="600" color={colors.tealAccent[800]} pb='10px'>
-                            Profile Summary
-                        </Typography>
-                        <Typography variant="h5" color={colors.gray[100]} justifyContent="">
-                            {datas.summary}
-                        </Typography>
+                    overflow-y="scroll"
+                    p="20px 0 0 10px"
+                >
+                    <Link to={"work"}
+                    style={{ textDecoration: 'none' }}
+                    >
+                    <Typography
+                            color={colors.tealAccent[800]}
+                            variant="h5"
+                            fontWeight="600">
+                            WORK EXPERIENCE
+                    </Typography>
+                    </Link>
+                    <Box height="60vh">
+                        <Funnel
+                        />
+
                     </Box>
-                </Box>
+                </Box> 
                 <Box
-                    gridColumn="span 6"
-                    gridRow="span 2"
+                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
+                    gridRow={{xs: "span 2", sm: "span 2", md: "span 2"}}
                     backgroundColor={colors.primary[400]}
                     overflow="auto"
                 >
@@ -131,7 +148,7 @@ const Dashboard = () => {
                         return (
                             <Box
                                 key={edu.id}
-                                display="flex"
+                                display={{xs: "block", sm: "flex", md: "flex"}}
                                 justifyContent="space-between"
                                 alignItems="center"
                                 borderBottom={`2px solid ${colors.primary[500]}`}
@@ -158,33 +175,9 @@ const Dashboard = () => {
                                     </Typography>
                                 </Box>
                             </Box>
-
                         )
                     })}
                 </Box>
-                <Box
-                    gridColumn="span 6"
-                    gridRow="span 2"
-                    backgroundColor={colors.primary[400]}
-                    overflow="hidden"
-                    p="0 0 0 10px"
-                >
-                    <Link to={"work"}
-                    style={{ textDecoration: 'none' }}
-                    >
-                    <Typography
-                            color={colors.tealAccent[800]}
-                            variant="h5"
-                            fontWeight="600">
-                            WORK EXPERIENCE
-                    </Typography>
-                    </Link>
-                    <Box height="30vh">
-                        <Funnel
-                        />
-
-                    </Box>
-                </Box> 
                 <Box>
                 </Box>
 

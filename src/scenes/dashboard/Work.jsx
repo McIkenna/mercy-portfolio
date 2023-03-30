@@ -17,12 +17,12 @@ const Work=()=>{
             display="grid"
             gridTemplateColumns="repeat(12, 1fr)"
             gap="20px"
-            pt="10%">
+            pt={{xs: "5px", sm: "40px", md: "10%"}}>
                 {
                 datas.workExperience.map((work) => {
                     return(<Box
-                gridColumn="span 3"
-                backgroundColor={colors.primary[400]}
+                gridColumn={{xs: "span 12", sm: "span 6", md: "span 3"}}
+                backgroundColor={colors.indigo[400]}
                 alighItems="center"
                 display="flex"
                 justifyContent="center"

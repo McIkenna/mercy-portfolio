@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import 'react-pro-sidebar/dist/css/styles.css';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
@@ -36,7 +36,29 @@ const Sidebar=()=>{
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(false);
-    const [selected, setSelected] = useState("Dashboard")
+    const [selected, setSelected] = useState(window.sessionStorage.getItem("selected"))
+    const [isMobile, setIsMobile] = useState(false)
+ 
+ 
+    console.log(window.sessionStorage.getItem("stayCollapsed"))
+
+    const handleResize = () => {
+      if (window.innerWidth <= 1030) {
+          setIsMobile(true)
+          setIsCollapsed(true)
+      } else {
+          setIsMobile(false)
+          setIsCollapsed(false)
+      }
+    }
+     
+
+    useEffect(()=>{
+
+        window.addEventListener("resize", handleResize)
+        window.sessionStorage.setItem("selected", selected);
+        
+    })
     return (
         <Box
         sx={{
@@ -50,16 +72,21 @@ const Sidebar=()=>{
                 padding: "5px 35px 5px 20px !important"
             },
             "& .pro-inner-item:hover": {
-                color: "#868dfb !important"
+                color: `${colors.indigo[600]} !important`
             },
             "& .pro-menu-item.active": {
-                color: "#6870fa !important"
+                color: `${colors.indigo[100]} !important`
             }
 
         }}>
             <ProSidebar collapsed={isCollapsed}>
+               
                 <Menu iconShape="square">
-                    <MenuItem 
+                {
+                    isMobile ? (
+                        ""
+                    ) : (
+                        <MenuItem 
                     onClick={() => setIsCollapsed(!isCollapsed)}
                     icon={isCollapsed ? <MenuOutlinedIcon />: undefined}
                     style={{
@@ -79,6 +106,10 @@ const Sidebar=()=>{
                         </Box>  
                         )}
                     </MenuItem>
+                    )
+                }
+                    
+                    
             {/* USER */}
             {!isCollapsed && (
                 <Box mb="25px">
@@ -94,7 +125,7 @@ const Sidebar=()=>{
 
                     <Box textAlign="center">
                     <Typography variant="h3" color={colors.tealAccent[100]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Mercy Okonna</Typography>
-                    <Typography variant="h6" color={colors.gray[400]}> Data Scientist, Machine Learning & AI Enthusiast</Typography>
+                    <Typography variant="h6" color={colors.indigo[400]}> Data Scientist, Machine Learning & AI Enthusiast</Typography>
                     </Box>
                 </Box>
                 
@@ -150,9 +181,7 @@ const Sidebar=()=>{
                 selected={selected}
                 setSelected={setSelected}
                 />
-                <Typography>
-                    Charts
-                    <Item
+                <Item
                 title = "PieChart"
                 to="/piechart"
                 icon={<PieChartOutlineIcon />}
@@ -173,7 +202,6 @@ const Sidebar=()=>{
                 selected={selected}
                 setSelected={setSelected}
                 />*/}
-                </Typography> 
             </Box>
 
             </Menu>

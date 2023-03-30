@@ -7,14 +7,23 @@ const ContactBox = ({ title, subtitle, icon }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box sx={{width:"100%", m:"20px 30px"}}>
+        <Box width="100%" 
+            margin={{xs: "10px", sm: "20px", md: "30px"}}
+            alignContent="center"
+            justifyContent="center">
             <Box display="flex" justifyContent="space-between">
                 <Box>
+                    <Box 
+                     display={{ xs: "none", sm: "flex", md: "flex" }}
+                     >
                     {icon}
+                    </Box>
+                
                     <Typography
                         variant="h4"
                         fontWeight="bold"
-                        sx={{ color: colors.gray[100] }}>
+                        sx={{ color: colors.gray[100] }}
+                       >
                         {title}
                     </Typography>
                 </Box>

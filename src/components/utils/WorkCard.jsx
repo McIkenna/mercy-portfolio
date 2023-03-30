@@ -6,16 +6,16 @@ const WorkCard = ({title, company, description,location }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box width="100%" m="20px 30px">
-            <Box display="flex" justifyContent="space-between" m="2px">
-            <Box >
-                <Typography variant="h3" sx={{ color: colors.tealAccent[100]}} pd="5px">
+        <Box width="100%" m="20px">
+            <Box display="flex" justifyContent="space-between" >
+            <Box>
+                <Typography variant="h3" sx={{ color: colors.tealAccent[100]}}>
                 {company}. {location} 
                 </Typography>
-                <Typography variant="h5" fontWeight="bold" sx={{ color: colors.tealAccent[200]}} pd="5px" pt="5px">
-                Job Title: {title}
+                <Typography variant="h5" fontWeight="bold" sx={{ color: colors.purpleAccent[200]}} pt="10px">
+                {title}
                 </Typography>
-                <Typography variant="h6" sx={{ color: colors.gray[200]}} p="10px">
+                <Typography variant="h6" sx={{ color: colors.gray[200]}}  align="justify">
                 {description}
                 </Typography>
             </Box>

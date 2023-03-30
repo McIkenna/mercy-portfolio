@@ -4,7 +4,7 @@ import {createTheme} from "@mui/material/styles";
 export const tokens = (mode) => ({
 ...(mode === "dark" ? {
     primary: {
-        100: "#dde6fb",
+        100: "#111a2f",
         200: "#bbccf6",
         300: "#9ab3f2",
         400: "#7899ed",
@@ -12,7 +12,7 @@ export const tokens = (mode) => ({
         600: "#4566ba",
         700: "#344d8c",
         800: "#22335d",
-        900: "#111a2f"
+        900: "dde6fb"
     },
     tealAccent: {
         100: "#def1fb",
@@ -46,7 +46,18 @@ export const tokens = (mode) => ({
         700: "#523a7d",
         800: "#362653",
         900: "#1b132a"
-    }
+    },
+    indigo: {
+        100: "#080e17",
+        200: "#101b2e",
+        300: "#172944",
+        400: "#1f365b",
+        500: "#274472",
+        600: "#52698e",
+        700:  "#7d8faa",
+        800: "#a9b4c7",
+        900: "#d4dae3",
+    },
 } : {
     primary: {
         900: "#111a2f",
@@ -91,11 +102,25 @@ export const tokens = (mode) => ({
         300: "#b8a0e3",
         200: "#cfbfec",
         100: "#e7dff6"
-    }
+    },
+    indigo: {
+        100: "#52698e",
+        200: "#a9b4c7",
+        300: "#7d8faa",
+        400: "#d4dae3",
+        500: "#274472",
+        600: "#1f365b",
+        700: "#172944",
+        800: "#101b2e",
+        900: "#080e17"
+    },
 
 }
  )
 })
+
+
+
 
 //mui theme settings
 
