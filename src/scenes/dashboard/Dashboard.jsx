@@ -97,10 +97,11 @@ const Dashboard = () => {
                     </Box>
                 </Box> 
                 <Box
-                    gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
-                    gridRow={{xs: "span 2", sm: "span 3", md: "span 4"}}
+                    gridColumn={{xs: "none", sm: "span 12", md: "span 6"}}
+                    gridRow={{xs: "none", sm: "span 3", md: "span 4"}}
+                    display={{xs: "none", sm: "block", md: "block"}}
                     backgroundColor={colors.primary[400]}
-                    overflow-y="scroll"
+                    overflow="scroll"
                     p="20px 0 0 10px"
                 >
                     <Link to={"work"}
@@ -119,6 +120,65 @@ const Dashboard = () => {
 
                     </Box>
                 </Box> 
+                {/* For mobile version for work*/}
+
+                <Box
+                    gridColumn="span 12"
+                    gridRow="span 2"
+                    display={{xs: "block", sm: "none", md: "none"}}
+                    backgroundColor={colors.primary[400]}
+                    overflow="auto"
+                >
+                    <Box
+                        display="flex"
+                        justifyContent="space-between"
+                        alignItems="center"
+                        borderBottom={`2px solid ${colors.primary[500]}`}
+                        colors={colors.gray[100]}
+                        p="15px"
+                    >
+                    <Link to={"education"}
+                    style={{ textDecoration: 'none' }}
+                    >
+                        <Typography
+                            color={colors.tealAccent[800]}
+                            variant="h5"
+                            fontWeight="600">
+                            WORK EXPERIENCE
+                        </Typography>
+                        </Link>
+                    </Box>
+                    {datas.workExperience.map((work) => {
+                        return (
+                            <Box
+                                key={work.id}
+                                display={{xs: "block", sm: "flex", md: "flex"}}
+                                justifyContent="space-between"
+                                alignItems="center"
+                                borderBottom={`2px solid ${colors.primary[500]}`}
+                                p="15px">
+                                <Box>
+                                    <Typography
+                                        color={colors.gray[100]}
+                                        fontWeight="600">
+                                        {work.companyName}
+                                    </Typography>
+                                </Box>
+                                <Box>
+                                    <Typography
+                                        color={colors.gray[200]}
+                                        variant="h6">
+                                        {work.jobTitle}
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        )
+                    })}
+                </Box>
+
+                {/* End of implementation*/}
+
+
                 <Box
                     gridColumn={{xs: "span 12", sm: "span 12", md: "span 6"}}
                     gridRow={{xs: "span 2", sm: "span 2", md: "span 2"}}
